@@ -1,0 +1,124 @@
+---
+name: Anna
+surname: Quaglieri (PhD)
+position: "Bioinformatics Data Scientist"
+address: "Mass Dynamics"
+email: "anna.quaglieri16@gmail.com"
+twitter: annaquagli
+github: annaquaglieri16
+linkedin: anna-quaglieri-692501108
+orcid: 0000-0002-3660-6990
+headcolor: 414141
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::awesomecv:
+    page_total: true
+    keep_tex: true
+always_allow_html: true
+---
+
+
+```{r setup, include=FALSE, message=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+renv::restore()
+#pkgs <- c('vitae' ,'here' ,'tinytex' ,'tibble' ,'glue' ,'rmarkdown' ,'dplyr', 'readr' ,'yaml')
+
+library(googlesheets4)
+
+readExcelSheets <- function(filename){
+  # read all sheets in .xlsx 
+  #all <- read_sheet('https://docs.google.com/spreadsheets/d/1beQJHYgh9pp040y8m27ItCeENGCf4VD7Sv5k2ddBpDU/edit#gid=554957228', range = 1:6)
+  all <- readxl::excel_sheets(filename)
+  # import each sheet into a list using readxl::read_excel
+  list <- lapply(all, function(x) readxl::read_excel(filename, sheet = x))
+  # save sheet name for each sheet (list)
+  names(list) <- all
+  # breaks up list and creates a dataframe for each sheet with df names matching sheet names
+  list2env(list, envir = .GlobalEnv)
+}
+
+library(here)
+library(dplyr)
+library(vitae)
+readExcelSheets(file.path(here(),"CV.xlsx"))
+```
+
+
+
+# Education
+
+```{r}
+education %>% 
+  detailed_entries(what = institution,
+                   when = year,
+                   why=details, .protect = F)
+```
+
+# Employment
+
+```{r}
+employment %>% 
+  detailed_entries(what = company,
+                   when = year,
+                   why = details, .protect = F)
+```
+
+# Leadership Roles
+
+```{r}
+leadership %>% 
+  detailed_entries(when = year,
+                   what = group,
+                   why = details, .protect = F)
+```
+
+
+# Public speaking
+
+```{r}
+talks %>% 
+  detailed_entries(what = group,
+                   when = year,
+                   why = details, .protect = FALSE)
+```
+
+\newpage
+# Publications
+\footnotesize
+
+```{r publications} 
+#bibliography_entries("pubs.bib", "Publications") 
+``` 
+
+
+- J. Bloom; **A. Quaglieri**; A. Triantafyllidis; P. Burton Ngov; G. Infusini; A. Webb (2021) "Mass Dynamics 1.0: A Streamlined, Web-Based Environment for Analyzing, Sharing, and Integrating Label-Free Data".  Journal of Proteome Research. DOI: 10.1021/acs.jproteome.1c00683 \href{10.1021/acs.jproteome.1c00683}{\faExternalLink}
+
+- **A. Quaglieri**; C. Flensburg; T.P Speed; Ian J Majewski (2020). "Finding a suitable library size to call variants in RNA-Seq". BMC Bioinformatics 21, 553. DOI: https://doi.org/10.1186/s12859-020-03860-4 \href{https://doi.org/10.1186/s12859-020-03860-4}{\faExternalLink}
+
+- **Anna Quaglieri** (2019) PhD Thesis: "Using transcriptomics to study relapse in acute myeloid leukaemia", Published at University of Melbourne \href{shorturl.at/drABC}{\faExternalLink}
+
+- C. D. DiNardo; I. S. Tiong; **A. Quaglieri**; S. MacRaild; S. Loghavi; F. C. Brown; R. Thijssen; G. Pomilio; A. Ivey; J. M. Salmon et al. (2020) "Molecular Patterns of Response and Treatment Failure after Frontline Venetoclax Combinations in Older Patients with AML". Blood 135 (11): 791-801. DOI: 10.1182/blood.2019003988 \href{10.1182/blood.2019003988}{\faExternalLink}
+
+- TS Scerri; **A. Quaglieri**, C. Cai; J JZernant; N. Matsunami; L. Baird; L. Scheppke; R. Bonelli; LA Yannuzzi; M. Friedlander; MacTel Project Consortium; C.A. Egan; M. Fruttiger; M. Leppert; R. Allikmets; M. Bahlo (2017) "Genome-wide analysis identifies common variants associated  with macular telangiectasia type 2" Nature Genetics 49(4):559-567. DOI: 10.1038/ng.3799 \href{10.1038/ng.3799}{\faExternalLink}
+
+- A. Farioli; S. Mattioli; **A. Quaglieri**; S. Curti; F.S. Violante; D. Coggon (2014)  "Musculoskeletal pain in Europe: the role of personal, occupational, and social risk factors." Scandinavian Journal of Work, Environment & Health 40(1):36-46. DOI: 10.5271/sjweh.3381 \href{10.5271/sjweh.3381}{\faExternalLink}
+
+# Public Outreach
+
+```{r}
+public_outreach %>%
+  brief_entries(what = glue::glue("\\textbf{<what>}: <details>", .open = "<", .close = ">"),
+                when = paste0(c(2017, 2018), "\\newline"), .protect = FALSE)
+```
+
+
+# Awards and scholarships
+
+```{r}
+awards %>%
+  brief_entries(what = glue::glue("\\textbf{<what>}: <details>", .open = "<", .close = ">"),
+                when = paste0(when, "\\newline"), .protect = FALSE)
+```
+

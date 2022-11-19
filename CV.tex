@@ -1,0 +1,323 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt,a4paper,]{awesome-cv}
+
+% Configure page margins with geometry
+\usepackage{geometry}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\definecolor{awesome}{HTML}{414141}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{Anna}{Quaglieri (PhD)}
+
+\position{Bioinformatics Data Scientist}
+\address{Mass Dynamics}
+
+\email{\href{mailto:anna.quaglieri16@gmail.com}{\nolinkurl{anna.quaglieri16@gmail.com}}}
+\orcid{0000-0002-3660-6990}
+\github{annaquaglieri16}
+\linkedin{anna-quaglieri-692501108}
+\twitter{annaquagli}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{2em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\honortitlestyle{#1}}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\honordatestyle{#1}}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\begin{cventries}
+    \cventry{PhD Student, WEHI Bioinformatics, Speed Lab}{}{}{Feb16-Sept19}{\begin{cvitems}
+\item PhD thesis: "Using transcriptomics to study relapse in acute myeloid leukaemia" \href{http://hdl.handle.net/11343/234028}{\faExternalLink}. The research focused on building a statistical framework to improve the understanding of the relapse mechanisms in particular subtypes of Acute Myeloid Leukemia.
+\end{cvitems}}
+    \cventry{Master Degree in Statistics, Universities of Bologna and Melbourne}{}{}{Sep12-Jul14}{}\vspace{-4.0mm}
+    \cventry{Master Thesis, WEHI Bioinformatics, Bahlo Lab}{}{}{Sep12-Jul14}{\begin{cvitems}
+\item Title: “Genome-Wide association study in presence of relatedness – Application to an eye disorder”. Preparation and analysis of SNP-Chip data from patients with
+a rare genetic eye disease, known as MacTel. Goal to perform a pilot GWAS for a larger study that was conducted for Scerri TS et al, 2017, Nature Genetics \href{https://www.nature.com/articles/ng.3799}{\faExternalLink}
+\end{cvitems}}
+    \cventry{Internship in Biostatistics, S.Orsola-Malpighi Hospital, Bologna}{}{}{Jul12-Sep12}{\begin{cvitems}
+\item Part of Master degree. The work involved data collection, cleaning, statistical modeling and led to the publication Farioli A et al (2014) \href{https://www.sjweh.fi/show_abstract.php?abstract_id=3381}{\faExternalLink} which was awarded the ISICO Paper Prize in 2014
+\end{cvitems}}
+    \cventry{Undergraduate Degree in Statistics, Universities of Bologna and Glasgow}{}{}{Sep09-Jul12}{\begin{cvitems}
+\item Title of Statistics Senior Honours project in Glasgow supervised by Professor Marian Scott (University of Glasgow): "Cancer in dogs and quality of life impact". Data analysed using generalised additive models and mixed
+effect models for longitudinal data.
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{employment}{%
+\section{Employment}\label{employment}}
+
+\begin{cventries}
+    \cventry{Bioinformatics Data Scientist at Mass Dynamics, Melbourne}{}{}{May21-Current}{\begin{cvitems}
+\item Guide Product team decisions with regards to statistical and bioinformatics techniques;
+\item Support users with methods and platform consultation so that they can achieve their outcome;
+\item Develop the scientific methods and sofwtare assets of the platform. Developed R Package MassExpression \href{https://github.com/MassDynamics/MassExpression}{\faExternalLink} to support processing of label-free quantitative data.
+\item Participate and present at scientific conferences and contribute to scientific manuscript writing (Contributed to Bloom J et al (2021) \href{https://pubs.acs.org/doi/10.1021/acs.jproteome.1c00683}{\faExternalLink})
+\end{cvitems}}
+    \cventry{Data Scientist Consultant at Eliiza, Melbourne}{}{}{Nov19-May21}{\begin{cvitems}
+\item Developed a Python workflow to pre-process and identify burnt areas from satellite images
+\item Led the development of a Python library to automate information extraction from documents. Now this is a product of the company Thea \href{https://eliiza.com.au/product/thea-document-processing/}{\faExternalLink}.
+\item Built classification models used and deployed into client’s production environment
+\end{cvitems}}
+    \cventry{Tutor in Stastics at University of Melbourne}{}{}{Mar18-May18}{\begin{cvitems}
+\item “Critical thinking with data (UNIB10006)” and “Data and decision making (MAST90072)”
+\end{cvitems}}
+    \cventry{Bioinformatics Research Assistant, WEHI, Majewski Lab}{}{}{Oct2019-Jan2019}{\begin{cvitems}
+\item Completion of PhD projects published in two papers: Courtney D Nardo et al (2020)\href{https://ashpublications.org/blood/article/135/11/791/430257/Molecular-patterns-of-response-and-treatment}{\faExternalLink} where I performed statistical analysis of the RNA-Seq data and Quaglieri et al, (2019), BMC Bioinformatics\href{https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-020-03860-4}{\faExternalLink} where I was the first author and performed all the analyses.
+\end{cvitems}}
+    \cventry{Bioinformatics Research Assistant, WEHI, Speed and Bahlo Labs}{}{}{Sep13-Mar16}{\begin{cvitems}
+\item Speed lab: Worked as the main statistician in epigenetics projects (Under publication) and collaborated in the creation of an R package for GC bias correction of ChIP-Seq data where the task was to upgrade existing R functions (unpublished work).
+\end{cvitems}}
+    \cventry{Bioinformatics Research Assistant, WEHI, Bahlo Labs}{}{}{Sep13-Mar16}{\begin{cvitems}
+\item Bahlo lab: Statistician in the team which discovered the first genetic clues for Macular Telangiectasia Type 2 disease through Genome-Wide Association study (Bahlo lab) (Scerri TS et al 2017, Nature Genetics) \href{https://www.nature.com/articles/ng.3799}{\faExternalLink}.
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{leadership-roles}{%
+\section{Leadership Roles}\label{leadership-roles}}
+
+\begin{cventries}
+    \cventry{R-Ladies Melbourne (President and Co-organiser)}{}{}{Oct16-Ongoin}{\begin{cvitems}
+\item The group (\href{www.meetup.com/R-Ladies-Melbourne/}{Meetup page: www.meetup.com/R-Ladies-Melbourne/}, founded in 2016, is the first R Programming community for women and supporters in Australia. President of the group in 2017/2018 where we organised 12 events (workshops, seminars and networking nights) doubling in members; defined the structure to become a not-for-profit association; provided funding for women to attend the useR! conference; gained a new sponsor Nous Group and renewed sponsorship from CSL. Helped running and organising events since 2016.
+\end{cvitems}}
+    \cventry{Parkville Toastmasters (VPM)}{}{}{2022-Ongoing}{\begin{cvitems}
+\item As Vice President Membership (VPM) I'm in charge of running inductions with new members to intriduce them to the club and how Toastmasters work; setting up new members into the system; organising mentorship between new and established members.
+\end{cvitems}}
+    \cventry{Bioconductor Code of Conduct (Secretary)}{}{}{2021-Ongoing}{\begin{cvitems}
+\item The CoC committee is responsible to file incidents and lead to a conflict resolution which will depend on the gravity of the incident. I share the same role as any other member in supporting conflict resolution and as secretary I set up meetings dates with committee members and organise minutes.
+\end{cvitems}}
+    \cventry{useR! Conferences organising committee}{}{}{2018/2019 Brisbane/Toulouse}{\begin{cvitems}
+\item UseR! Is one of the most important annual international R conferences. Main task to review abstracts and scholarship applications. In Brisbane also organised the logistics of R-Ladies Melbourne travel scholarships to support national participants.
+\end{cvitems}}
+    \cventry{Workers Club Lions Australian Football Club (Treasurer and Captain)}{}{}{2017-2021}{\begin{cvitems}
+\item Treasurer: The role involves looking after incoming funds to the club which come from selling merchandise at the Workers Club and fundraising events. Captain: On field captain of the football team.
+\end{cvitems}}
+    \cventry{Mentor at BrainSTEMM}{}{}{2018.0}{\begin{cvitems}
+\item Co-mentored a group of four high school girls from Gippsland for a three months period. Students for exposed to what it means to do research in science; learnt coding and basic principles of statistics for the first time; presented their final work in an inspiring video and organised a coding day where they became coding instructors for their classmates.
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{public-speaking}{%
+\section{Public speaking}\label{public-speaking}}
+
+\begin{cventries}
+    \cventry{Department of Molecular Life Sciences, University of Zürich}{}{}{Aug22}{\begin{cvitems}
+\item Introductory talk to Mass Spectrometry-based Proteomics while visiting Mark Robinson laboratory in the Department of Molecular Life Sciences, University of Zürich.
+\end{cvitems}}
+    \cventry{Conference: American Society of Mass Spectrometry Conference}{}{}{Jun22}{\begin{cvitems}
+\item Selected talk at ASMS (American Society of Mass Spectrometry) 2022 talk on automated benchmarking. Title: Automated benchmarking enables continuous confidence in scientific software development.
+\end{cvitems}}
+    \cventry{Invited speaker at data science career events (Australia)}{}{}{2021-2022}{\begin{cvitems}
+\item Invited speaker at the Victorian branch of the Satistical Society of Australia (SSA VIC) Industry Showcase Night (2021)
+\item Invited speaker at the Women in Machine Learning and Data Science (WiMLDS) Career Transitions in ML and AI meetup in Melbourne (2021)
+\item Invited speaker at the SSA VIC Early Career Panel (2022)
+\end{cvitems}}
+    \cventry{Invited speaker at data science career events (R-Ladies Baltimore)}{}{}{Nov21}{\begin{cvitems}
+\item Panel Discussion on Careers in Data Science (Event page: \href{shorturl.at/akvDG}{shorturl.at/akvDG})
+\end{cvitems}}
+    \cventry{Speaker at R-Ladies Melbourne}{}{}{Aug2021}{\begin{cvitems}
+\item Title: A remote glimpse into the useR! 2021 conference (Recording: \href{https://www.youtube.com/watch?v=XBoWCTYUvgY}{\faExternalLink})
+\end{cvitems}}
+    \cventry{Virtual Brown Bag by Eliiza}{}{}{Sep20}{\begin{cvitems}
+\item Title: "Automating Data Extraction from documents" (Recording: \href{https://www.youtube.com/watch?v=pBJoYr_oLEI&t=2s}{\faExternalLink})
+\end{cvitems}}
+    \cventry{PhD completion seminar (WEHI)}{}{}{Aug19}{\begin{cvitems}
+\item Title:Using the transcriptome to study therapy response in luekaemia (Recording: \href{https://www.youtube.com/watch?v=JiX-byutVLw&t=5s}{\faExternalLink})
+\end{cvitems}}
+    \cventry{Invited talk at the Monash Bioinformatics weekly seminar}{}{}{Apr18}{\begin{cvitems}
+\item Title: A suite of Bioinformatics tools to call and explore somatic mutations over time from RNA-Seq (Slides: \href{shorturl.at/FHJN5}{\faExternalLink})
+\end{cvitems}}
+    \cventry{Speaker at R-Ladies Melbourne monthly meetup}{}{}{Feb18}{\begin{cvitems}
+\item Title: Producing publication ready document in R Markdown (Slides: \href{http://rpubs.com/annaquagli/471405}{\faExternalLink})
+\end{cvitems}}
+    \cventry{Conference: ABACBS Selected talk}{}{}{Dec18}{\begin{cvitems}
+\item Title: Correcting unwanted variation in RNA-seq data derived from a multicentre study of Leukemia (Slides \href{shorturl.at/aBFIK}{\faExternalLink})
+\end{cvitems}}
+    \cventry{Conference: Bioconductor Asia conference Invited Speaker}{}{}{2017/2018}{\begin{cvitems}
+\item Invited talk to represent R-Ladies Melbourne (Slides: \href{shorturl.at/rKY28}{\faExternalLink})
+\end{cvitems}}
+    \cventry{Conference: Royal Statistical Society Selected Talk, Cardiff}{}{}{Sep18}{\begin{cvitems}
+\item Short talk: "Correcting unwanted variation in RNA sequencing data from a multi-centre study of leukaemia (Slides \href{shorturl.at/dlu25}{\faExternalLink})
+\end{cvitems}}
+    \cventry{Conference: useR! 2018 Selected Workshop Presenter, Brisbane}{}{}{Jul18}{\begin{cvitems}
+\item Looking to clean your data? Learn how to Remove Unwanted Variation with R (tutorial video \href{https://bit.ly/2DNcypO}{\faExternalLink}) and Introduction to textual analysis of social media data with R, using the idytext approach (tutorial video \href{https://bit.ly/2t0k1LH}{\faExternalLink})
+\end{cvitems}}
+    \cventry{Conference: COMBINE Invited instructor, Melbourne}{}{}{2017}{\begin{cvitems}
+\item Workshop title: “Introdcution to Bioconductor”. Invited to prepare and lead part of the one-day workshop. Material at \href{https://github.com/COMBINE-Australia/2017-05-19-bioconductor-melbourne}{https://github.com/COMBINE-Australia/2017-05-19-bioconductor-melbourne}.
+\end{cvitems}}
+    \cventry{Conference: COMBINE Selected Poster and Talk}{}{}{2016}{\begin{cvitems}
+\item Poster Title and Short Talk: Finding Optimal Coverage to sequence RNA (Slides: \href{shorturl.at/dlorS}{\faExternalLink})
+\end{cvitems}}
+\end{cventries}
+
+\newpage
+
+\hypertarget{publications}{%
+\section{Publications}\label{publications}}
+
+\footnotesize
+
+\begin{itemize}
+\item
+  J. Bloom; \textbf{A. Quaglieri}; A. Triantafyllidis; P. Burton Ngov;
+  G. Infusini; A. Webb (2021) ``Mass Dynamics 1.0: A Streamlined,
+  Web-Based Environment for Analyzing, Sharing, and Integrating
+  Label-Free Data''. Journal of Proteome Research. DOI:
+  10.1021/acs.jproteome.1c00683
+  \href{10.1021/acs.jproteome.1c00683}{\faExternalLink}
+\item
+  \textbf{A. Quaglieri}; C. Flensburg; T.P Speed; Ian J Majewski (2020).
+  ``Finding a suitable library size to call variants in RNA-Seq''. BMC
+  Bioinformatics 21, 553. DOI:
+  \url{https://doi.org/10.1186/s12859-020-03860-4}
+  \href{https://doi.org/10.1186/s12859-020-03860-4}{\faExternalLink}
+\item
+  \textbf{Anna Quaglieri} (2019) PhD Thesis: ``Using transcriptomics to
+  study relapse in acute myeloid leukaemia'', Published at University of
+  Melbourne \href{shorturl.at/drABC}{\faExternalLink}
+\item
+  C. D. DiNardo; I. S. Tiong; \textbf{A. Quaglieri}; S. MacRaild; S.
+  Loghavi; F. C. Brown; R. Thijssen; G. Pomilio; A. Ivey; J. M. Salmon
+  et al.~(2020) ``Molecular Patterns of Response and Treatment Failure
+  after Frontline Venetoclax Combinations in Older Patients with AML''.
+  Blood 135 (11): 791-801. DOI: 10.1182/blood.2019003988
+  \href{10.1182/blood.2019003988}{\faExternalLink}
+\item
+  TS Scerri; \textbf{A. Quaglieri}, C. Cai; J JZernant; N. Matsunami; L.
+  Baird; L. Scheppke; R. Bonelli; LA Yannuzzi; M. Friedlander; MacTel
+  Project Consortium; C.A. Egan; M. Fruttiger; M. Leppert; R. Allikmets;
+  M. Bahlo (2017) ``Genome-wide analysis identifies common variants
+  associated with macular telangiectasia type 2'' Nature Genetics
+  49(4):559-567. DOI: 10.1038/ng.3799
+  \href{10.1038/ng.3799}{\faExternalLink}
+\item
+  A. Farioli; S. Mattioli; \textbf{A. Quaglieri}; S. Curti; F.S.
+  Violante; D. Coggon (2014) ``Musculoskeletal pain in Europe: the role
+  of personal, occupational, and social risk factors.'' Scandinavian
+  Journal of Work, Environment \& Health 40(1):36-46. DOI:
+  10.5271/sjweh.3381 \href{10.5271/sjweh.3381}{\faExternalLink}
+\end{itemize}
+
+\hypertarget{public-outreach}{%
+\section{Public Outreach}\label{public-outreach}}
+
+\begin{cvhonors}
+    \cvhonor{}{\textbf{Research Video – “A genetic treasure map: new research into MacTel”}: Short Movie: https://bit.ly/2CWnu2H. This short movie tells the story of our WEHI team’s discovery of the genetic causes of MacTel published in Thomas S et al., Nature Genetics, 2017.}{}{2017\newline}
+    \cvhonor{}{\textbf{R-Ladies blog posts}: Summary and learnings after being the main organiser of the group in 2018: https://r-ladiesmelbourne-team.netlify.app/ and https://rladiesmelb2018.netlify.app/.}{}{2018\newline}
+\end{cvhonors}
+
+\hypertarget{awards-and-scholarships}{%
+\section{Awards and scholarships}\label{awards-and-scholarships}}
+
+\begin{cvhonors}
+    \cvhonor{}{\textbf{Poster Prize - COMBINE Conference}: Poster title: Correcting for unwanted heterogeneity in RNA sequencing data derived from a multicentre study of leukemia.}{}{2018\newline}
+    \cvhonor{}{\textbf{Travel Grants – Bioconductor Asia Conference}: Both years invited to present about R-Ladies Melbourne achievements.}{}{2016/2017\newline}
+    \cvhonor{}{\textbf{Travel Grant – ABACBS Bioinformatics conference}: Presented poster short Talk: Finding Optimal Coverage to sequence RNA (Slides: shorturl.at/dlorS)}{}{2016\newline}
+    \cvhonor{}{\textbf{Poster Prize and Speaker prize – ABACBS and COMBINE Conferences}: Poster and short talk title: Finding a suitable library size to call mutations from RNA Sequencing.}{}{2016\newline}
+    \cvhonor{}{\textbf{AMSI Scholarship}: Winter school in Biological and Environmental Mathematical Modelling, Brisbane}{}{2016\newline}
+    \cvhonor{}{\textbf{ISICO Paper Prize}: Price from the Italian Scientific Institute of the Spinal Cord – 2014 for Farioli A et al, 2014.}{}{2014\newline}
+\end{cvhonors}
+
+
+\label{LastPage}~
+\end{document}
